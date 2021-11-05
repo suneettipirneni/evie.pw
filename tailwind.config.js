@@ -4,12 +4,15 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        blurple: "#4E5D94",
+        blurple: "#7289DA",
+        darkBlurple: "#23272A",
       },
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      borderStyle: ["hover", "focus"],
+    },
   },
   plugins: [],
 };
