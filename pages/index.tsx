@@ -2,7 +2,6 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
-import ReactRoundedImage from "react-rounded-image";
 
 const coolBox: string =
   "m-4 p-6 text-left no-underline border-solid border-4 hover:border-opacity-50 border-light-blue-500 rounded-lg text-white max-w-screen-sm";
@@ -12,34 +11,16 @@ const Home: NextPage = () => {
     <div>
       <div className="grid justify-items-stretch ...">
         <div className="justify-self-center ...">
-          <h1 className="text-4xl sm:text-6xl lg:text-7xl leading-none font-extrabold tracking-tight  mt-10 mb-8 sm:mt-14 sm:mb-10 text-white">
-            It's time to use Evie in your Discord server.
+          <h1 className="text-4xl sm:text-6xl lg:text-7xl leading-none font-extrabold tracking-tight  mt-10 mb-8 sm:mt-14 sm:mb-10 text-white text-center">
+            It&apos;s time to use Evie in your Discord server.
           </h1>
-          <div className=" grid-cols-4">
-            <ReactRoundedImage
-              image="/assets/leaderboard.png"
-              roundedColor="#7289da"
-              imageWidth="500"
-              imageHeight="500"
-              roundedSize="13"
-              hoverColor="#FFFFFF"
-              borderRadius="50"
-            />
-          </div>
-
           <br></br>
-
           <div className="justify-self-center ...">
-            <p className="max-w-screen-lg text-lg sm:text-2xl sm:leading-10 font-medium mb-10 sm:mb-11 text-center">
+            <p className="text-lg sm:text-2xl sm:leading-10 font-medium mb-10 sm:mb-11 text-center">
               Evie is a feature-rich, easy to use Discord bot built to deliver
               the best experience of a bot on Discord!
             </p>
-            <style
-              dangerouslySetInnerHTML={{
-                __html:
-                  "\n        #GFG {\n            text-decoration: none;\n        }\n    ",
-              }}
-            />
+
             <div className="grid justify-items-stretch ...">
               <div className="justify-self-center ...">
                 <div className="hover: transition duration-500 hover:scale-125">
@@ -112,50 +93,97 @@ const Home: NextPage = () => {
           </g>
         </svg>
       </div>
+      <br></br>
       <div className="feature-image">
         <div className="features">
-          <div className="text-5xl leading-none font-extrabold tracking-tight mb-4 text-white">
+          <div className="text-5xl leading-none font-extrabold tracking-tight mb-4 text-white text-center">
             What is Evie all about?
           </div>
           <div className="text-2xl tracking-tight mb-10 text-center">
-            Here at Jamble Studios we strive to provide you with the best
-            Discord Bots, weather it's being a reliable music bot or adding
-            useful and fun commands to your server.
+            Evie is a public moderation/music/fun/economy/utility bot for
+            Discord, designed with modern Discord features like slash commands.
           </div>
           <div className="w-full relative text-white overflow-hidden rounded-3xl flex shadow-lg">
             <div className="w-full flex md:flex-col bg-gradient-to-br from-purple-500 to-indigo-500">
               <div className="sm:max-w-sm sm:flex-none md:w-auto md:flex-auto flex flex-col items-start relative z-10 p-6 xl:p-8">
                 <h5 className="text-xl font-semibold mb-2 text-shadow">
-                  Lag Free Audio
+                  Utilities
                 </h5>
                 <p className="font-medium text-violet-100 text-shadow mb-4 text-left">
-                  Jamble's music player allows you to both queue and play music
-                  without waiting for them to download. Jamble currently
-                  supports Spotify, YouTube and SoundCloud.
+                  <ul>
+                    <li>
+                      Google the internet with{" "}
+                      <code>/google &lt;thing you want to search for&gt;</code>
+                    </li>
+                    <li>
+                      If you ping @Evie✨#1625 she will now respond with a
+                      message on how to use her commands!
+                    </li>
+                    <li>
+                      Need help with any commands <code>/help</code>
+                    </li>
+                  </ul>
                 </p>
               </div>
             </div>
             <div className="w-full flex md:flex-col bg-gradient-to-br from-purple-500 to-indigo-500">
               <div className="sm:max-w-sm sm:flex-none md:w-auto md:flex-auto flex flex-col items-start relative z-10 p-6 xl:p-8">
                 <h5 className="text-xl font-semibold mb-2 text-shadow">
-                  Handy utilities
+                  $EVIE
                 </h5>
                 <p className="font-medium text-violet-100 text-shadow mb-4 text-left">
-                  Jamble has a range of useful utilities for moderation, such as
-                  clearing channels on command, and more coming soon (were
-                  mainly focusing on music atm).
+                  <ul>
+                    <li>
+                      See how much $EVIE you have with <code>/bal</code>
+                    </li>
+                    <li>
+                      Vote for a free 10k $EVIE <code>/vote</code>
+                    </li>
+                    <li>
+                      Beg for money with <code>/beg</code>
+                    </li>
+                    <li>
+                      Check who has the most $EVIE <code>/leaderboard</code>
+                    </li>
+                    <li>
+                      <code>/inventory</code> to check your inventory out!
+                    </li>
+                    <li>
+                      Baking! Buy an oven in the <code>/shop</code> then use{" "}
+                      <code>/buy &lt;itemid&gt;</code> and finally, start baking
+                      those muffins with <code>/bake muffin</code> You can also
+                      sell those muffins for money{" "}
+                      <code>/sell &lt;itemid&gt;</code> (if you ever want to
+                      know an item id do <code>/shop</code> to see a list of the
+                      item ids!)
+                    </li>
+                  </ul>
                 </p>
               </div>
             </div>
             <div className="w-full flex md:flex-col bg-gradient-to-br from-purple-500 to-indigo-500 text-center">
               <div className="sm:max-w-sm sm:flex-none md:w-auto md:flex-auto flex flex-col items-start relative z-10 p-6 xl:p-8 text-center">
                 <h5 className="text-xl font-semibold mb-2 text-shadow text-center">
-                  Uptime!
+                  Moderation
                 </h5>
                 <p className="font-medium text-violet-100 text-shadow mb-4 text-left">
-                  Unlike many other competitors, we never go down and if we do
-                  it's usually just a 10 second update to make Jamble even more
-                  easier for you server owners and more fun and easy for all.{" "}
+                  <ul>
+                    <li>
+                      Using the{" "}
+                      <a href="https://dash.eviebot.rocks/">Dashboard</a> set
+                      banned words and/or use our default list of banned words
+                      to protect your Discord server.
+                    </li>
+                    <li>
+                      Welcome new people that join your Discord server and set a
+                      custom message in the{" "}
+                      <a href="https://dash.eviebot.rocks/">Dashboard</a>
+                    </li>
+                    <li>
+                      Change the colour Evie uses for every embed in your server
+                      on the <a href="https://dash.eviebot.rocks/">Dashboard</a>
+                    </li>
+                  </ul>
                 </p>
               </div>
             </div>

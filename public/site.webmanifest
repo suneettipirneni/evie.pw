@@ -1,6 +1,6 @@
 {
-    "name": " Jamble",
-    "short_name": " Jamble",
+    "name": "Evie",
+    "short_name": "Evie",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",
@@ -13,8 +13,7 @@
             "type": "image/png"
         }
     ],
-    "theme_color": "#ffffff",
-    "background_color": "#ffffff",
-    "start_url": "https://jamble.rocks/",
+    "theme_color": "#7289da",
+    "background_color": "#7289da",
     "display": "standalone"
 }
