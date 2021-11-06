@@ -7,6 +7,7 @@ import * as mongoose from "mongoose";
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <div className="App">
+      <Head>
       <meta charSet="UTF-8" />
       <meta
         name="viewport"
@@ -59,6 +60,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#7289da" />
       <meta name="msapplication-TileColor" content="#7289da" />
       <meta name="theme-color" content="#7289da" />
+      </Head>
       <nav className="relative flex flex-wrap items-center content-between py-3 px-4  bg-transparent">
         <div className="transition duration-500 ease-in-out  hover: transform hover:-translate-y-1 hover:scale-150 ...">
           <img src="assets/EvieHead.svg" width="60" height="60" />
