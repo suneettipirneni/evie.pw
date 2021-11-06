@@ -15,9 +15,9 @@ const Home: NextPage = () => {
         </h1>
 
         <div className="flex items-center justify-center flex-wrap max-w-screen-md">
-          <a href="https://nextjs.org/docs" className={coolBox}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
+          <a href="/posts" className={coolBox}>
+            <h2>Posts &rarr;</h2>
+            <p>View some posts.</p>
           </a>
 
           <a href="https://nextjs.org/learn" className={coolBox}>
