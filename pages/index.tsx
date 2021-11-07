@@ -89,7 +89,7 @@ const Home: NextPage = () => {
               y={5}
               fill="rgba(255,255,255,0.3)"
             />
-            <use xlinkHref="#gentle-wave" x={48} y={7} fill="#7289da" />
+            <use xlinkHref="#gentle-wave" x={48} y={7} fill="#2c2f33" />
           </g>
         </svg>
       </div>
@@ -104,7 +104,7 @@ const Home: NextPage = () => {
             Discord, designed with modern Discord features like slash commands.
           </div>
           <div className="w-full relative text-white overflow-hidden rounded-3xl flex shadow-lg">
-            <div className="w-full flex md:flex-col bg-gradient-to-br from-purple-500 to-indigo-500">
+            <div className="w-full flex md:flex-col bg-gradient-to-br from-blurple to-blurple">
               <div className="sm:max-w-sm sm:flex-none md:w-auto md:flex-auto flex flex-col items-start relative z-10 p-6 xl:p-8">
                 <h5 className="text-xl font-semibold mb-2 text-shadow">
                   Utilities
@@ -126,7 +126,7 @@ const Home: NextPage = () => {
                 </p>
               </div>
             </div>
-            <div className="w-full flex md:flex-col bg-gradient-to-br from-purple-500 to-indigo-500">
+            <div className="w-full flex md:flex-col bg-gradient-to-br from-blurple to-blurple">
               <div className="sm:max-w-sm sm:flex-none md:w-auto md:flex-auto flex flex-col items-start relative z-10 p-6 xl:p-8">
                 <h5 className="text-xl font-semibold mb-2 text-shadow">
                   $EVIE
@@ -161,7 +161,7 @@ const Home: NextPage = () => {
                 </p>
               </div>
             </div>
-            <div className="w-full flex md:flex-col bg-gradient-to-br from-purple-500 to-indigo-500 text-center">
+            <div className="w-full flex md:flex-col bg-gradient-to-br from-blurple to-blurple text-center">
               <div className="sm:max-w-sm sm:flex-none md:w-auto md:flex-auto flex flex-col items-start relative z-10 p-6 xl:p-8 text-center">
                 <h5 className="text-xl font-semibold mb-2 text-shadow text-center">
                   Moderation

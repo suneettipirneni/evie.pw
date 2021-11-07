@@ -1,65 +1,71 @@
 import "tailwindcss/tailwind.css";
 import type { AppProps } from "next/app";
 import Head from "next/head";
-import styles from "../styles/Home.module.css";
-import * as mongoose from "mongoose";
+import Contributors from "../react-contributors";
+import React, { Component } from "react";
+
+// Username of the repo owner.
+const owner = "twisttaan";
+
+// Repository name or array with multiple repositories names.
+const repos = ["EvieWeb"];
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <div className="App">
       <Head>
-      <meta charSet="UTF-8" />
-      <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1, shrink-to-fit=no"
-      />
-      <link rel="stylesheet" href="/legacy.css" />
-      <link
-        href="https://fonts.googleapis.com/css?family=Poppins:300,400,600,700,800,900&display=swap"
-        rel="stylesheet"
-      />
-      <link
-        href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700,800,900&display=swap"
-        rel="stylesheet"
-      />
-      <link
-        href="https://fonts.googleapis.com/css?family=Lato:300,400,600,700,800,900&display=swap"
-        rel="stylesheet"
-      />
-      <title>Evie</title>
-      <meta content="Evie Bot" property="og:title" />
-      <meta name="theme-color" content="#7289da" />
-      <meta
-        content="Evie is a feature-rich, easy to use Discord bot built to deliver the best experience of a bot on Discord!"
-        property="og:description"
-      />
-      <meta content="https://eviebot.rocks" property="og:url" />
-      <meta
-        content="https://eviebot.rocks/assets/EvieIcon.png"
-        property="og:image"
-      />
-      <meta content="#43B581" data-react-helmet="true" name="theme-color" />
-      <link
-        rel="apple-touch-icon"
-        sizes="180x180"
-        href="/apple-touch-icon.png"
-      />
-      <link
-        rel="icon"
-        type="image/png"
-        sizes="32x32"
-        href="/favicon-32x32.png"
-      />
-      <link
-        rel="icon"
-        type="image/png"
-        sizes="16x16"
-        href="/favicon-16x16.png"
-      />
-      <link rel="manifest" href="/site.webmanifest" />
-      <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#7289da" />
-      <meta name="msapplication-TileColor" content="#7289da" />
-      <meta name="theme-color" content="#7289da" />
+        <meta charSet="UTF-8" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+        <link rel="stylesheet" href="/legacy.css" />
+        <link
+          href="https://fonts.googleapis.com/css?family=Poppins:300,400,600,700,800,900&display=swap"
+          rel="stylesheet"
+        />
+        <link
+          href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700,800,900&display=swap"
+          rel="stylesheet"
+        />
+        <link
+          href="https://fonts.googleapis.com/css?family=Lato:300,400,600,700,800,900&display=swap"
+          rel="stylesheet"
+        />
+        <title>Evie</title>
+        <meta content="Evie Bot" property="og:title" />
+        <meta name="theme-color" content="#7289da" />
+        <meta
+          content="Evie is a feature-rich, easy to use Discord bot built to deliver the best experience of a bot on Discord!"
+          property="og:description"
+        />
+        <meta content="https://eviebot.rocks" property="og:url" />
+        <meta
+          content="https://eviebot.rocks/assets/EvieIcon.png"
+          property="og:image"
+        />
+        <meta content="#43B581" data-react-helmet="true" name="theme-color" />
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/apple-touch-icon.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon-16x16.png"
+        />
+        <link rel="manifest" href="/site.webmanifest" />
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#7289da" />
+        <meta name="msapplication-TileColor" content="#7289da" />
+        <meta name="theme-color" content="#7289da" />
       </Head>
       <nav className="relative flex flex-wrap items-center content-between py-3 px-4  bg-transparent">
         <div className="transition duration-500 ease-in-out  hover: transform hover:-translate-y-1 hover:scale-150 ...">
@@ -124,7 +130,12 @@ function MyApp({ Component, pageProps }: AppProps) {
       <div className="footer">
         <br />
         <div className="twisttaan">
-          made with ❤️ by<a href="https://github.com/twisttaan"> twisttaan</a>
+          eviebot.rocks made with ❤️ by
+          <div className="grid justify-items-stretch ...">
+            <div className="justify-self-center ...">
+              <Contributors owner={owner} repo={repos} />
+            </div>
+          </div>
         </div>
       </div>
 
