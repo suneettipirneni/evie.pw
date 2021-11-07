@@ -102,7 +102,6 @@ const Home: NextPage = () => {
           <div className="text-2xl tracking-tight mb-10 text-center">
             Evie is a public moderation/music/fun/economy/utility bot for
             Discord, designed with modern Discord features like slash commands.
-            NOTE: MOD AND DASHBOARD ARENT OUT YET, OUR WEBSITE WAS UPDATED FIRST THEN THE BOT
           </div>
           <div className="w-full relative text-white overflow-hidden rounded-3xl flex shadow-lg">
             <div className="w-full flex md:flex-col bg-gradient-to-br from-purple-500 to-indigo-500">
