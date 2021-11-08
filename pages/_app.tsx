@@ -92,6 +92,16 @@ function MyApp({ Component, pageProps }: AppProps) {
             Documentation
           </span>
         </a>
+        &nbsp;&nbsp;&nbsp;
+        <a
+          href="https://discord.gg/82Crd8tZRF"
+          className="relative inline-flex items-center justify-start inline-block px-5 py-3 overflow-hidden font-medium transition-all bg-blurple rounded-full hover:bg-white group"
+        >
+          <span className="absolute inset-0 border-0 group-hover:border-[25px] ease-linear duration-100 transition-all border-white rounded-full"></span>
+          <span className="relative w-full text-left text-white transition-colors duration-200 ease-in-out group-hover:text-blue-600">
+            Support Server
+          </span>
+        </a>
       </nav>
       <Component {...pageProps} />
       <br></br>
