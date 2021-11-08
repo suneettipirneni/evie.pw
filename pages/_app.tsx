@@ -8,7 +8,7 @@ import React, { Component } from "react";
 const owner = "twisttaan";
 
 // Repository name or array with multiple repositories names.
-const repos = ["EvieWeb"];
+const repos = ["EvieWeb", "jamble"];
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -19,6 +19,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
+
         <link rel="stylesheet" href="/legacy.css" />
         <link
           href="https://fonts.googleapis.com/css?family=Poppins:300,400,600,700,800,900&display=swap"
@@ -72,16 +73,25 @@ function MyApp({ Component, pageProps }: AppProps) {
           <img src="assets/EvieHead.svg" width="60" height="60" />
         </div>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <div className="nav-item dropdown text-right">
-          <div className="dropdown-divider" />
-          <a className="dropdown-item" href="https://dash.eviebot.rocks">
+        <a
+          href="https://dash.eviebot.rocks"
+          className="relative inline-flex items-center justify-start inline-block px-5 py-3 overflow-hidden font-medium transition-all bg-blue-600 rounded-full hover:bg-white group"
+        >
+          <span className="absolute inset-0 border-0 group-hover:border-[25px] ease-linear duration-100 transition-all border-white rounded-full"></span>
+          <span className="relative w-full text-left text-white transition-colors duration-200 ease-in-out group-hover:text-blue-600">
             Dashboard
-          </a>
-          <div className="dropdown-divider" />
-          <a className="dropdown-item" href="https://docs.eviebot.rocks/">
+          </span>
+        </a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a
+          href="https://docs.eviebot.rocks"
+          className="relative inline-flex items-center justify-start inline-block px-5 py-3 overflow-hidden font-medium transition-all bg-blue-600 rounded-full hover:bg-white group"
+        >
+          <span className="absolute inset-0 border-0 group-hover:border-[25px] ease-linear duration-100 transition-all border-white rounded-full"></span>
+          <span className="relative w-full text-left text-white transition-colors duration-200 ease-in-out group-hover:text-blue-600">
             Documentation
-          </a>
-        </div>
+          </span>
+        </a>
       </nav>
       <Component {...pageProps} />
       <br></br>
