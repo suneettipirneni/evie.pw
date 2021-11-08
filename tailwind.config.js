@@ -5,7 +5,7 @@ module.exports = {
     extend: {
       colors: {
         blurple: "#7289DA",
-        darkBlurple: "#23272A",
+        darkBlurple: "#2c2f33",
       },
     },
   },

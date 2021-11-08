@@ -9,7 +9,7 @@ const coolBox: string =
 const Home: NextPage = () => {
   return (
     <div>
-      <div className="grid justify-items-stretch ...">
+      <div className=" grid justify-items-stretch ...">
         <div className="justify-self-center ...">
           <h1 className="text-4xl sm:text-6xl lg:text-7xl leading-none font-extrabold tracking-tight  mt-10 mb-8 sm:mt-14 sm:mb-10 text-white text-center">
             It&apos;s time to use Evie in your Discord server.
@@ -28,7 +28,7 @@ const Home: NextPage = () => {
                     <a
                       href="https://discord.com/oauth2/authorize?client_id=807543126424158238&permissions=518855707712&scope=bot%20applications.commands"
                       id="GFG"
-                      className="box-border relative z-30 inline-flex items-center justify-center w-auto px-8 py-3 overflow-hidden font-bold text-white transition-all duration-300 bg-indigo-600 rounded-md cursor-pointer group ring-offset-2 ring-1 ring-indigo-300 ring-offset-indigo-200 hover:ring-offset-indigo-500 ease focus:outline-none"
+                      className="box-border relative z-30 inline-flex items-center justify-center w-auto px-8 py-3 overflow-hidden font-bold text-white transition-all duration-300 bg-blurple rounded-md cursor-pointer group ring-offset-2 ring-1 ring-indigo-300 ring-offset-indigo-200 hover:ring-offset-indigo-500 ease focus:outline-none"
                     >
                       <span className="absolute bottom-0 right-0 w-8 h-20 -mb-8 -mr-5 transition-all duration-300 ease-out transform rotate-45 translate-x-1 bg-white opacity-10 group-hover:translate-x-0" />
                       <span className="absolute top-0 left-0 w-20 h-8 -mt-1 -ml-12 transition-all duration-300 ease-out transform -rotate-45 -translate-x-1 bg-white opacity-10 group-hover:translate-x-0" />
@@ -103,92 +103,96 @@ const Home: NextPage = () => {
         Evie is a public moderation/music/fun/economy/utility bot for Discord,
         designed with modern Discord features like slash commands.
       </div>
-      <div className="grid justify-items-stretch bg-blurple ...">
-        <div className="justify-self-center bg-blurple ...">
-          <div className="w-full flex md:flex-col bg-gradient-to-br from-blurple to-blurple">
-            <div className="sm:max-w-sm max-w-lg sm:flex-none md:w-auto md:flex-auto flex flex-col items-start relative z-10 p-6 xl:p-8">
-              <h5 className="text-xl font-semibold mb-2 text-shadow">
-                Utilities
-              </h5>
-              <p className="font-medium text-violet-100 text-shadow mb-4 text-left">
-                <ul>
-                  <li>
-                    Google the internet with{" "}
-                    <code>/google &lt;thing you want to search for&gt;</code>
-                  </li>
-                  <li>
-                    If you ping @Evie✨#1625 she will now respond with a message
-                    on how to use her commands!
-                  </li>
-                  <li>
-                    Need help with any commands <code>/help</code>
-                  </li>
-                </ul>
-              </p>
-              <img
-                className="w-200 h-200 rounded-2xl mx-auto text-center"
-                src="/assets/leaderboard.png"
-              />
+      <div className="grid justify-items-stretch bg-darkBlurple   ...">
+        <div className="justify-self-center bg-darkBlurple  ...">
+          <div className="rounded-xl ...">
+            <div className="w-full flex md:flex-col bg-gradient-to-br from-blurple to-blurple">
+              <div className="sm:max-w-sm max-w-lg sm:flex-none md:w-auto md:flex-auto flex flex-col items-start relative z-10 p-6 xl:p-8 ">
+                <h5 className="text-xl font-semibold mb-2 text-shadow">
+                  Utilities
+                </h5>
+                <p className="font-medium text-violet-100 text-shadow mb-4 text-left">
+                  <ul>
+                    <li>
+                      Google the internet with{" "}
+                      <code>/google &lt;thing you want to search for&gt;</code>
+                    </li>
+                    <li>
+                      If you ping @Evie✨#1625 she will now respond with a
+                      message on how to use her commands!
+                    </li>
+                    <li>
+                      Need help with any commands <code>/help</code>
+                    </li>
+                  </ul>
+                </p>
+                <img
+                  className="w-200 h-200 rounded-2xl mx-auto text-center"
+                  src="/assets/leaderboard.png"
+                />
+              </div>
             </div>
-          </div>
 
-          <div className="w-full flex md:flex-col bg-gradient-to-br from-blurple to-blurple">
-            <div className="sm:max-w-sm sm:flex-none md:w-auto md:flex-auto flex flex-col items-start relative z-10 p-6 xl:p-8">
-              <h5 className="text-xl font-semibold mb-2 text-shadow">$EVIE</h5>
-              <p className="font-medium text-violet-100 text-shadow mb-4 text-left">
-                <ul>
-                  <li>
-                    See how much $EVIE you have with <code>/bal</code>
-                  </li>
-                  <li>
-                    Vote for a free 10k $EVIE <code>/vote</code>
-                  </li>
-                  <li>
-                    Beg for money with <code>/beg</code>
-                  </li>
-                  <li>
-                    Check who has the most $EVIE <code>/leaderboard</code>
-                  </li>
-                  <li>
-                    <code>/inventory</code> to check your inventory out!
-                  </li>
-                  <li>
-                    Baking! Buy an oven in the <code>/shop</code> then use{" "}
-                    <code>/buy &lt;itemid&gt;</code> and finally, start baking
-                    those muffins with <code>/bake muffin</code> You can also
-                    sell those muffins for money{" "}
-                    <code>/sell &lt;itemid&gt;</code> (if you ever want to know
-                    an item id do <code>/shop</code> to see a list of the item
-                    ids!)
-                  </li>
-                </ul>
-              </p>
+            <div className="w-full flex md:flex-col bg-gradient-to-br from-blurple to-blurple">
+              <div className="sm:max-w-sm sm:flex-none md:w-auto md:flex-auto flex flex-col items-start relative z-10 p-6 xl:p-8">
+                <h5 className="text-xl font-semibold mb-2 text-shadow">
+                  $EVIE
+                </h5>
+                <p className="font-medium text-violet-100 text-shadow mb-4 text-left">
+                  <ul>
+                    <li>
+                      See how much $EVIE you have with <code>/bal</code>
+                    </li>
+                    <li>
+                      Vote for a free 10k $EVIE <code>/vote</code>
+                    </li>
+                    <li>
+                      Beg for money with <code>/beg</code>
+                    </li>
+                    <li>
+                      Check who has the most $EVIE <code>/leaderboard</code>
+                    </li>
+                    <li>
+                      <code>/inventory</code> to check your inventory out!
+                    </li>
+                    <li>
+                      Baking! Buy an oven in the <code>/shop</code> then use{" "}
+                      <code>/buy &lt;itemid&gt;</code> and finally, start baking
+                      those muffins with <code>/bake muffin</code> You can also
+                      sell those muffins for money{" "}
+                      <code>/sell &lt;itemid&gt;</code> (if you ever want to
+                      know an item id do <code>/shop</code> to see a list of the
+                      item ids!)
+                    </li>
+                  </ul>
+                </p>
+              </div>
             </div>
-          </div>
-          <div className="w-full flex md:flex-col bg-gradient-to-br from-blurple to-blurple text-center">
-            <div className="sm:max-w-sm sm:flex-none md:w-auto md:flex-auto flex flex-col items-start relative z-10 p-6 xl:p-8 text-center">
-              <h5 className="text-xl font-semibold mb-2 text-shadow text-center">
-                Moderation
-              </h5>
-              <p className="font-medium text-violet-100 text-shadow mb-4 text-left">
-                <ul>
-                  <li>
-                    Using the{" "}
-                    <a href="https://dash.eviebot.rocks/">Dashboard</a> set
-                    banned words and/or use our default list of banned words to
-                    protect your Discord server.
-                  </li>
-                  <li>
-                    Welcome new people that join your Discord server and set a
-                    custom message in the{" "}
-                    <a href="https://dash.eviebot.rocks/">Dashboard</a>
-                  </li>
-                  <li>
-                    Change the colour Evie uses for every embed in your server
-                    on the <a href="https://dash.eviebot.rocks/">Dashboard</a>
-                  </li>
-                </ul>
-              </p>
+            <div className="w-full flex md:flex-col bg-gradient-to-br from-blurple to-blurple text-center">
+              <div className="sm:max-w-sm sm:flex-none md:w-auto md:flex-auto flex flex-col items-start relative z-10 p-6 xl:p-8 text-center">
+                <h5 className="text-xl font-semibold mb-2 text-shadow text-center">
+                  Moderation
+                </h5>
+                <p className="font-medium text-violet-100 text-shadow mb-4 text-left">
+                  <ul>
+                    <li>
+                      Using the{" "}
+                      <a href="https://dash.eviebot.rocks/">Dashboard</a> set
+                      banned words and/or use our default list of banned words
+                      to protect your Discord server.
+                    </li>
+                    <li>
+                      Welcome new people that join your Discord server and set a
+                      custom message in the{" "}
+                      <a href="https://dash.eviebot.rocks/">Dashboard</a>
+                    </li>
+                    <li>
+                      Change the colour Evie uses for every embed in your server
+                      on the <a href="https://dash.eviebot.rocks/">Dashboard</a>
+                    </li>
+                  </ul>
+                </p>
+              </div>
             </div>
           </div>
         </div>
