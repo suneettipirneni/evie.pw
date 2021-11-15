@@ -14,6 +14,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <div className="App">
       <Head>
+      <meta name="facebook-domain-verification" content="v399rpk6ib3xt1oqbyzpd6l7oyygrv" />
         <meta charSet="UTF-8" />
         <meta
           name="viewport"
