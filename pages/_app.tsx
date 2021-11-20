@@ -14,7 +14,10 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <div className="App">
       <Head>
-      <meta name="facebook-domain-verification" content="v399rpk6ib3xt1oqbyzpd6l7oyygrv" />
+        <meta
+          name="facebook-domain-verification"
+          content="v399rpk6ib3xt1oqbyzpd6l7oyygrv"
+        />
         <meta charSet="UTF-8" />
         <meta
           name="viewport"
@@ -111,41 +114,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <br></br>
       <br></br>
       <div className="page_end"></div>
-      <div className="flex-auto p-6 gs-card">
-        <div className="text-5xl leading-none font-extrabold tracking-tight mb-4 text-white">
-          Invite Evie Today!
-        </div>
-        <div className="text-2xl tracking-tight mb-10">
-          and give your server a fun and reliable Discord Bot!
-        </div>
-        <div className="transition duration-500 ease-in-out  hover: transform hover:-translate-y-1 hover:scale-550...">
-          <a
-            href="https://discord.com/oauth2/authorize?client_id=807543126424158238&permissions=518855707712&scope=bot%20applications.commands"
-            id="GFG"
-            className="box-border relative z-30 inline-flex items-center justify-center w-auto px-8 py-3 overflow-hidden font-bold text-white transition-all duration-300 bg-blurple rounded-md cursor-pointer group ring-offset-2 ring-1 ring-indigo-300 ring-offset-indigo-200 hover:ring-offset-indigo-500 ease focus:outline-none"
-          >
-            <span className="absolute bottom-0 right-0 w-8 h-20 -mb-8 -mr-5 transition-all duration-300 ease-out transform rotate-45 translate-x-1 bg-white opacity-10 group-hover:translate-x-0" />
-            <span className="absolute top-0 left-0 w-20 h-8 -mt-1 -ml-12 transition-all duration-300 ease-out transform -rotate-45 -translate-x-1 bg-white opacity-10 group-hover:translate-x-0" />
-            <span className="relative z-20 flex items-center text-sm">
-              <svg
-                className="relative w-5 mb-2 font-medium leading-tight text-lg mr-2 text-white"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M13 10V3L4 14h7v7l9-11h-7z"
-                />
-              </svg>
-              Invite Evie
-            </span>
-          </a>
-        </div>
-      </div>
+
       <br />
       <div className="page_end"></div>
       <div className="footer">
