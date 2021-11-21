@@ -1,8 +1,117 @@
-/* ./src/index.css */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+<template>
+  <div className="App">
+    <nav
+      className="relative flex flex-wrap items-center content-between py-3 px-4  bg-transparent"
+    >
+      <div
+        className="transition duration-500 ease-in-out  hover: transform hover:-translate-y-1 hover:scale-150 ..."
+      >
+        <img src="assets/EvieHead.svg" width="60" height="60" />
+      </div>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a
+        href="https://dash.eviebot.rocks"
+        className="relative items-center justify-start inline-block px-5 py-3 overflow-hidden font-medium transition-all bg-blurple rounded-full hover:bg-white group"
+      >
+        <span
+          className="absolute inset-0 border-0 group-hover:border-[25px] ease-linear duration-100 transition-all border-white rounded-full"
+        ></span>
+        <span
+          className="relative w-full text-left text-white transition-colors duration-200 ease-in-out group-hover:text-blue-600"
+        >
+          Dashboard
+        </span>
+      </a>
+      &nbsp;&nbsp;&nbsp;
+      <a
+        href="https://docs.eviebot.rocks"
+        className="relative items-center justify-start inline-block px-5 py-3 overflow-hidden font-medium transition-all bg-blurple rounded-full hover:bg-white group"
+      >
+        <span
+          className="absolute inset-0 border-0 group-hover:border-[25px] ease-linear duration-100 transition-all border-white rounded-full"
+        ></span>
+        <span
+          className="relative w-full text-left text-white transition-colors duration-200 ease-in-out group-hover:text-blue-600"
+        >
+          Documentation
+        </span>
+      </a>
+      &nbsp;&nbsp;&nbsp;
+      <a
+        href="https://discord.gg/82Crd8tZRF"
+        className="relative items-center justify-start inline-block px-5 py-3 overflow-hidden font-medium transition-all bg-blurple rounded-full hover:bg-white group"
+      >
+        <span
+          className="absolute inset-0 border-0 group-hover:border-[25px] ease-linear duration-100 transition-all border-white rounded-full"
+        ></span>
+        <span
+          className="relative w-full text-left text-white transition-colors duration-200 ease-in-out group-hover:text-blue-600"
+        >
+          Support Server
+        </span>
+      </a>
+    </nav>
+    <router-view />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <div className="page_end"></div>
+    <br />
+    <div className="page_end"></div>
+    <div className="footer">
+      <br />
+      <div className="twisttaan">
+        eviebot.rocks with ❤️ by
+        <div className="grid justify-items-stretch ...">
+          <div className="justify-self-center ...">
+            <!-- <Contributors owner="{owner}" repo="{repos}" /> -->
+          </div>
+        </div>
+      </div>
+    </div>
 
+    <svg
+      class="waves"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlnsXlink="http://www.w3.org/1999/xlink"
+      viewBox="0 24 150 28"
+      preserveAspectRatio="none"
+      shapeRendering="auto"
+    >
+      <defs>
+        <path
+          id="gentle-wave"
+          d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
+        />
+      </defs>
+      <g class="parallax">
+        <use
+          xlink:href="#gentle-wave"
+          x="48"
+          y="0"
+          fill="rgba(255,255,255,0.7"
+        />
+        <use
+          xlink:href="#gentle-wave"
+          x="48"
+          y="3"
+          fill="rgba(255,255,255,0.5)"
+        />
+        <use
+          xlink:href="#gentle-wave"
+          x="48"
+          y="5"
+          fill="rgba(255,255,255,0.3)"
+        />
+        <use xlink:href="#gentle-wave" x="48" y="7" fill="#2c2f33" />
+      </g>
+    </svg>
+  </div>
+</template>
+
+<style>
 body {
   font-family: "Poppins", sans-serif !important;
   background-color: #2c2f33;
@@ -265,3 +374,4 @@ body.dark .feature-image img {
     font-size: 24px;
   }
 }
+</style>
