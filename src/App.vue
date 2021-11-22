@@ -1,3 +1,33 @@
+<script lang="ts">
+import { defineComponent } from "vue";
+
+interface ContributorData {
+  login: string;
+  avatar_url: string;
+  contributions: string;
+}
+
+export default defineComponent({
+  data() {
+    return {
+      contributors: new Array<ContributorData>(),
+    };
+  },
+  async created() {
+    await this.getContributors();
+  },
+  methods: {
+    async getContributors() {
+      const res = await fetch(
+        "https://api.github.com/repos/twisttaan/evieweb/contributors"
+      );
+      const json = await res.json();
+      this.contributors = json;
+    },
+  },
+});
+</script>
+
 <template>
   <div className="App">
     <nav
@@ -6,7 +36,7 @@
       <div
         className="transition duration-500 ease-in-out  hover: transform hover:-translate-y-1 hover:scale-150 ..."
       >
-        <img src="assets/EvieHead.svg" width="60" height="60" />
+        <img src="/assets/EvieHead.svg" width="60" height="60" />
       </div>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <a
@@ -66,7 +96,27 @@
         eviebot.rocks with ❤️ by
         <div className="grid justify-items-stretch ...">
           <div className="justify-self-center ...">
-            <!-- <Contributors owner="{owner}" repo="{repos}" /> -->
+            <div className="flex content-center flex-row flex-wrap">
+              <a
+              v-for="(contributor, index) in contributors"
+              :key="contributor + '_' + index"
+              :href="'https://github.com/' + contributor.login"
+              className="flex min-w-1/2 w-3/12	m-4	p-4"
+            >
+              <img
+                :src="contributor.avatar_url"
+                className="overflow-hidden rounded-h h-20 w-20"
+              />
+              <div
+                className="flex flex-grow flex-shrink flex-col justify-center ml-4 text-center"
+              >
+                <h4>
+                  {{ contributor.login }}
+                </h4>
+                <small> Contributions: {{ contributor.contributions }} </small>
+              </div>
+            </a>
+            </div>
           </div>
         </div>
       </div>

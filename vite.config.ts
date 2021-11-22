@@ -13,4 +13,7 @@ export default defineConfig({
       port: 443,
     },
   },
+  optimizeDeps: {
+    exclude: ['@octokit/rest > stream']
+  }
 });
