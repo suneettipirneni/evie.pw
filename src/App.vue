@@ -1,5 +1,6 @@
 <script lang="ts">
 import { defineComponent } from "vue";
+import fetch from "node-fetch";
 
 interface ContributorData {
   login: string;
@@ -22,6 +23,7 @@ export default defineComponent({
         "https://api.github.com/repos/twisttaan/evieweb/contributors"
       );
       const json = await res.json();
+      // ts-ignore
       this.contributors = json;
     },
   },
