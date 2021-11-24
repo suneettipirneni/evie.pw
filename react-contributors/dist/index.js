@@ -101,7 +101,8 @@ var ProfileComponent = /*#__PURE__*/function (_React$Component) {
     return /*#__PURE__*/React.createElement(Profile, {
       href: this.props.url
     }, /*#__PURE__*/React.createElement(Photo, {
-      src: this.props.avatar_url
+      src: this.props.avatar_url,
+      alt: this.props.name
     }), /*#__PURE__*/React.createElement(Intro, null, /*#__PURE__*/React.createElement(Name, null, this.props.name), /*#__PURE__*/React.createElement(Subtitle, null, "Contributions: ", this.props.contributions)));
   };
 
