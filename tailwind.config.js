@@ -1,5 +1,5 @@
 module.exports = {
-  purge: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
+  purge: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
@@ -10,12 +10,6 @@ module.exports = {
       colors: {
         blurple: "#7289DA",
         darkBlurple: "#2c2f33",
-      },
-      borderRadius: {
-        h: "50%",
-      },
-      minWidth: {
-        "1/2": "18.125rem",
       },
     },
   },
