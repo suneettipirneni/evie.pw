@@ -3,6 +3,7 @@ import type { AppProps } from "next/app";
 import Head from "next/head";
 import Contributors from "../react-contributors";
 import React, { Component } from "react";
+import Image from "next/image";
 
 // Username of the repo owner.
 const owner = "twisttaan";
@@ -14,10 +15,6 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <div className="App">
       <Head>
-        <meta
-          name="facebook-domain-verification"
-          content="v399rpk6ib3xt1oqbyzpd6l7oyygrv"
-        />
         <meta charSet="UTF-8" />
         <meta
           name="viewport"
@@ -38,12 +35,13 @@ function MyApp({ Component, pageProps }: AppProps) {
           rel="stylesheet"
         />
         <title>Evie</title>
-        <meta content="Evie Bot" property="og:title" />
+        <meta content="Evie Discord Bot" property="og:title" />
         <meta name="theme-color" content="#7289da" />
         <meta
           content="Evie is a feature-rich, easy to use Discord bot built to deliver the best experience of a bot on Discord!"
           property="og:description"
         />
+        <meta name="Evie is a feature-rich, easy to use Discord bot built to deliver the best experience of a bot on Discord!" />
         <meta content="https://eviebot.rocks" property="og:url" />
         <meta
           content="https://eviebot.rocks/assets/EvieIcon.png"
@@ -74,7 +72,12 @@ function MyApp({ Component, pageProps }: AppProps) {
       </Head>
       <nav className="relative flex flex-wrap items-center content-between py-3 px-4  bg-transparent">
         <div className="transition duration-500 ease-in-out  hover: transform hover:-translate-y-1 hover:scale-150 ...">
-          <img src="assets/EvieHead.svg" width="60" height="60" />
+          <Image
+            src="assets/EvieHead.svg"
+            width="60"
+            height="60"
+            alt="Evie Head Logo, a modern beagle looking head of a beagle"
+          />
         </div>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <a
