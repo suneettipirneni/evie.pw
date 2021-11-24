@@ -41,7 +41,10 @@ function MyApp({ Component, pageProps }: AppProps) {
           content="Evie is a feature-rich, easy to use Discord bot built to deliver the best experience of a bot on Discord!"
           property="og:description"
         />
-        <meta name="Evie is a feature-rich, easy to use Discord bot built to deliver the best experience of a bot on Discord!" />
+        <meta
+          name="description"
+          content="Evie is a feature-rich, easy to use Discord bot built to deliver the best experience of a bot on Discord!"
+        />
         <meta content="https://eviebot.rocks" property="og:url" />
         <meta
           content="https://eviebot.rocks/assets/EvieIcon.png"
@@ -73,7 +76,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <nav className="relative flex flex-wrap items-center content-between py-3 px-4  bg-transparent">
         <div className="transition duration-500 ease-in-out  hover: transform hover:-translate-y-1 hover:scale-150 ...">
           <Image
-            src="assets/EvieHead.svg"
+            src="/assets/EvieHead.svg"
             width="60"
             height="60"
             alt="Evie Head Logo, a modern beagle looking head of a beagle"
