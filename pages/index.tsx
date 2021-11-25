@@ -1,12 +1,8 @@
 import type { NextPage } from "next";
-import Head from "next/head";
 import Image from "next/image";
-import styles from "../styles/Home.module.css";
-
-const coolBox: string =
-  "m-4 p-6 text-left no-underline border-solid border-4 hover:border-opacity-50 border-light-blue-500 rounded-lg text-white max-w-screen-sm";
-
-const Home: NextPage = () => {
+import { usePlausible } from "next-plausible";
+const Index: NextPage = () => {
+  const plausible = usePlausible();
   return (
     <div>
       <div className=" grid justify-items-stretch ...">
@@ -26,6 +22,7 @@ const Home: NextPage = () => {
                 <div className="transition duration-500 ease-in-out  hover: transform hover:-translate-y-1 hover:scale-550...">
                   <div className="hover: transition duration-500 hover:scale-125">
                     <a
+                      onClick={() => plausible("mainInvite")}
                       href="https://discord.com/oauth2/authorize?client_id=807543126424158238&permissions=518855707712&scope=bot%20applications.commands"
                       id="GFG"
                       className="box-border relative z-30 inline-flex items-center justify-center w-auto px-8 py-3 overflow-hidden font-bold text-white transition-all duration-300 bg-blurple rounded-md cursor-pointer group ring-offset-2 ring-1 ring-indigo-300 ring-offset-indigo-200 hover:ring-offset-indigo-500 ease focus:outline-none"
@@ -236,4 +233,4 @@ const Home: NextPage = () => {
   );
 };
 
-export default Home;
+export default Index;
