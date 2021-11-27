@@ -5,6 +5,7 @@ import Head from "next/head";
 import React from "react";
 import Image from "next/image";
 import PlausibleProvider from "next-plausible";
+import Script from "next/script";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -54,6 +55,26 @@ function MyApp({ Component, pageProps }: AppProps) {
           <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#7289da" />
           <meta name="msapplication-TileColor" content="#7289da" />
           <meta name="theme-color" content="#7289da" />
+          <>
+            <Script
+              async
+              src="https://www.googletagmanager.com/gtag/js?id=AW-879792145"
+            />
+            <Script id="google-analytics">
+              {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag("js", new Date());
+          
+          gtag("config", "AW-879792145");          
+        `}
+            </Script>
+            <Script id="gtag">
+              {`gtag('event', 'conversion', {'send_to': 'AW-879792145/secWCOqin4YDEJGgwqMD'});`}
+            </Script>
+          </>
         </Head>
         <nav className="relative flex flex-wrap items-center content-between py-3 px-4  bg-transparent">
           <div className="transition duration-500 ease-in-out  hover: transform hover:-translate-y-1 hover:scale-150 ...">
