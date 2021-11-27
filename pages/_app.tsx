@@ -6,6 +6,7 @@ import React from "react";
 import Image from "next/image";
 import PlausibleProvider from "next-plausible";
 import Script from "next/script";
+import Link from "next/link";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -56,35 +57,52 @@ function MyApp({ Component, pageProps }: AppProps) {
           <meta name="msapplication-TileColor" content="#7289da" />
           <meta name="theme-color" content="#7289da" />
         </Head>
-        <nav className="relative flex flex-wrap items-center content-between py-3 px-4  bg-transparent">
-          <div className="transition duration-500 ease-in-out  hover: transform hover:-translate-y-1 hover:scale-150 ...">
-            <Image
-              src="/assets/EvieHead.svg"
-              width="60"
-              height="60"
-              alt="Evie Head Logo, a modern beagle looking head of a beagle"
-            />
+        <nav
+          className="relative z-50 h-24 select-none"
+          x-data="{ showMenu: false }"
+        >
+          <div className="container relative flex flex-wrap items-center justify-between h-24 mx-auto overflow-hidden font-medium md:overflow-visible lg:justify-center sm:px-4 md:px-2">
+            <div className="flex items-center justify-start w-1/4 h-full pr-4">
+              <div className="transition duration-500 ease-in-out  hover: transform hover:-translate-y-1 hover:scale-150 ...">
+                <Link href="/" passHref>
+                  <span className="p-1 text-xl font-black leading-none text-gray-900">
+                    <Image
+                      src="/assets/EvieHead.svg"
+                      width="60"
+                      height="60"
+                      alt="Evie Head Logo, a modern beagle looking head of a beagle"
+                    />
+                  </span>
+                </Link>
+              </div>
+            </div>
+            <div className="top-0 left-0 items-start hidden w-full h-full p-4 text-sm bg-gray-900 bg-opacity-50 md:items-center md:w-3/4 md:absolute lg:text-base md:bg-transparent md:p-0 md:relative md:flex">
+              <div className="flex-col w-full h-auto overflow-hidden bg-white rounded-lg md:bg-transparent md:overflow-visible md:rounded-none md:relative md:flex md:flex-row">
+                <div className="flex flex-col items-start justify-center w-full space-x-6 text-center lg:space-x-8 md:w-2/3 md:mt-0 md:flex-row md:items-center">
+                  <a
+                    href="https://discord.gg/82Crd8tZRF"
+                    className="relative inline-flex items-center justify-start inline-block px-5 py-3 overflow-hidden font-medium transition-all bg-blurple rounded-full hover:bg-white group"
+                  >
+                    <span className="absolute inset-0 border-0 group-hover:border-[25px] ease-linear duration-100 transition-all border-white rounded-full"></span>
+                    <span className="relative w-full text-left text-white transition-colors duration-200 ease-in-out group-hover:text-blue-600">
+                      Support Server
+                    </span>
+                  </a>
+                </div>
+              </div>
+              <div className="flex flex-col items-start justify-end w-full pt-4 md:items-center md:w-1/3 md:flex-row md:py-0">
+                <a
+                  href="https://dash.eviebot.rocks"
+                  className="relative inline-flex items-center justify-start inline-block px-5 py-3 overflow-hidden font-medium transition-all bg-blurple rounded-full hover:bg-white group"
+                >
+                  <span className="absolute inset-0 border-0 group-hover:border-[25px] ease-linear duration-100 transition-all border-white rounded-full"></span>
+                  <span className="relative w-full text-left text-white transition-colors duration-200 ease-in-out group-hover:text-blue-600">
+                    Dashboard
+                  </span>
+                </a>
+              </div>
+            </div>
           </div>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <a
-            href="https://dash.eviebot.rocks"
-            className="relative inline-flex items-center justify-start inline-block px-5 py-3 overflow-hidden font-medium transition-all bg-blurple rounded-full hover:bg-white group"
-          >
-            <span className="absolute inset-0 border-0 group-hover:border-[25px] ease-linear duration-100 transition-all border-white rounded-full"></span>
-            <span className="relative w-full text-left text-white transition-colors duration-200 ease-in-out group-hover:text-blue-600">
-              Dashboard
-            </span>
-          </a>
-          &nbsp;&nbsp;&nbsp;
-          <a
-            href="https://discord.gg/82Crd8tZRF"
-            className="relative inline-flex items-center justify-start inline-block px-5 py-3 overflow-hidden font-medium transition-all bg-blurple rounded-full hover:bg-white group"
-          >
-            <span className="absolute inset-0 border-0 group-hover:border-[25px] ease-linear duration-100 transition-all border-white rounded-full"></span>
-            <span className="relative w-full text-left text-white transition-colors duration-200 ease-in-out group-hover:text-blue-600">
-              Support Server
-            </span>
-          </a>
         </nav>
         <Component {...pageProps} />
         <br></br>
