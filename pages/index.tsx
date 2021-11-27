@@ -1,12 +1,22 @@
 import type { NextPage } from "next";
 import Image from "next/image";
 import { usePlausible } from "next-plausible";
+import ReactPlayer from "react-player/lazy";
 const Index: NextPage = () => {
   const plausible = usePlausible();
   return (
     <div>
       <div className=" grid justify-items-stretch ...">
         <div className="justify-self-center ...">
+          <ReactPlayer
+            className="hidden md:block float-right"
+            url="https://www.youtube.com/watch?v=9r5pLCOOmXM"
+            playing={true}
+            loop={true}
+            muted={true}
+            width={360}
+            height={640}
+          />
           <h1 className="text-4xl sm:text-6xl lg:text-7xl leading-none font-extrabold tracking-tight  mt-10 mb-8 sm:mt-14 sm:mb-10 text-white text-center">
             It&apos;s time to use Evie in your Discord server.
           </h1>
@@ -17,7 +27,17 @@ const Index: NextPage = () => {
               Evie is a feature-rich, easy to use Discord bot built to deliver
               the best experience of a bot on Discord!
             </p>
+
             <div className="grid justify-items-stretch ...">
+              <ReactPlayer
+                className="block md:hidden justify-self-center"
+                url="https://www.youtube.com/watch?v=9r5pLCOOmXM"
+                playing={true}
+                loop={true}
+                muted={true}
+                width={360}
+                height={640}
+              />
               <div className="justify-self-center ...">
                 <div className="transition duration-500 ease-in-out  hover: transform hover:-translate-y-1 hover:scale-550...">
                   <div className="hover: transition duration-500 hover:scale-125">
