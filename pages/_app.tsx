@@ -72,7 +72,7 @@ function MyApp({ Component, pageProps }: AppProps) {
             <div className="container relative flex flex-wrap items-center justify-between h-24 mx-auto overflow-hidden font-medium md:overflow-visible lg:justify-center sm:px-4 md:px-2">
               <div className="flex items-center justify-start w-1/4 h-full pr-4">
                 <div className="transition duration-500 ease-in-out  hover: transform hover:-translate-y-1 hover:scale-150 ...">
-                  <Link href="/" passHref>
+                  <Link href="https://evie.eviebot.rocks" passHref>
                     <span className="p-1 text-xl font-black leading-none text-gray-900">
                       <Image
                         src="/assets/EvieHead.svg"
