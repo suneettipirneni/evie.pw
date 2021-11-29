@@ -23,7 +23,7 @@ const Index: NextPage = () => {
           <br />
           <br />
           <div className="justify-self-center ...">
-            <p className="text-lg sm:text-2xl sm:leading-10 font-medium mb-10 sm:mb-11 text-center">
+            <p className="text-white text-lg sm:text-2xl sm:leading-10 font-medium mb-10 sm:mb-11 text-center">
               Evie is a feature-rich, easy to use Discord bot built to deliver
               the best experience of a bot on Discord!
             </p>
