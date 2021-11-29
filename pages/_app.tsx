@@ -5,7 +5,6 @@ import Head from "next/head";
 import React from "react";
 import Image from "next/image";
 import PlausibleProvider from "next-plausible";
-import Script from "next/script";
 import Link from "next/link";
 
 function MyApp({ Component, pageProps }: AppProps) {
