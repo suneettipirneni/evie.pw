@@ -56,53 +56,67 @@ function MyApp({ Component, pageProps }: AppProps) {
           <meta name="msapplication-TileColor" content="#7289da" />
           <meta name="theme-color" content="#7289da" />
         </Head>
-        <nav
-          className="relative z-50 h-24 select-none"
-          x-data="{ showMenu: false }"
-        >
-          <div className="container relative flex flex-wrap items-center justify-between h-24 mx-auto overflow-hidden font-medium md:overflow-visible lg:justify-center sm:px-4 md:px-2">
-            <div className="flex items-center justify-start w-1/4 h-full pr-4">
-              <div className="transition duration-500 ease-in-out  hover: transform hover:-translate-y-1 hover:scale-150 ...">
-                <Link href="https://evie.eviebot.rocks" passHref>
-                  <span className="p-1 text-xl font-black leading-none text-gray-900">
-                    <Image
-                      src="/assets/EvieHead.svg"
-                      width="60"
-                      height="60"
-                      alt="Evie Head Logo, a modern beagle looking head of a beagle"
-                    />
-                  </span>
-                </Link>
-              </div>
-            </div>
-            <div className="top-0 left-0 items-start hidden w-full h-full p-4 text-sm bg-gray-900 bg-opacity-50 md:items-center md:w-3/4 md:absolute lg:text-base md:bg-transparent md:p-0 md:relative md:flex">
-              <div className="flex-col w-full h-auto overflow-hidden bg-white rounded-lg md:bg-transparent md:overflow-visible md:rounded-none md:relative md:flex md:flex-row">
-                <div className="flex flex-col items-start justify-center w-full space-x-6 text-center lg:space-x-8 md:w-2/3 md:mt-0 md:flex-row md:items-center">
-                  <a
-                    href="https://discord.gg/82Crd8tZRF"
-                    className="relative inline-flex items-center justify-start inline-block px-5 py-3 overflow-hidden font-medium transition-all bg-blurple rounded-full hover:bg-white group"
-                  >
-                    <span className="absolute inset-0 border-0 group-hover:border-[25px] ease-linear duration-100 transition-all border-white rounded-full"></span>
-                    <span className="relative w-full text-left text-white transition-colors duration-200 ease-in-out group-hover:text-blue-600">
-                      Support Server
+        <section className="w-full px-8 text-white">
+          <div className="container flex flex-col flex-wrap items-center justify-between py-5 mx-auto md:flex-row max-w-7xl">
+            <div className="relative flex flex-col md:flex-row">
+              <a
+                href="#_"
+                className="flex items-center mb-5 font-medium text-gray-900 lg:w-auto lg:items-center lg:justify-center md:mb-0"
+              >
+                <div className="transition duration-500 ease-in-out  hover: transform hover:-translate-y-1 hover:scale-150 ...">
+                  <Link href="https://evie.eviebot.rocks" passHref>
+                    <span className="p-1 text-xl font-black leading-none text-gray-900">
+                      <Image
+                        src="/assets/EvieHead.svg"
+                        width="60"
+                        height="60"
+                        alt="Evie Head Logo, a modern beagle looking head of a beagle"
+                      />
                     </span>
-                  </a>
+                  </Link>
                 </div>
-              </div>
-              <div className="flex flex-col items-start justify-end w-full pt-4 md:items-center md:w-1/3 md:flex-row md:py-0">
+              </a>
+              <nav className="flex flex-wrap items-center mb-5 text-base md:mb-0 md:pl-8 md:ml-8">
+                <div className="mr-5 font-medium leading-6 text-white hover:text-blurple">
+                  <Link href="/">Home</Link>
+                </div>
+                <a
+                  href="https://discord.gg/82Crd8tZRF"
+                  className="mr-5 font-medium leading-6 text-white hover:text-blurple"
+                >
+                  Support Server
+                </a>
                 <a
                   href="https://dash.eviebot.rocks"
-                  className="relative inline-flex items-center justify-start inline-block px-5 py-3 overflow-hidden font-medium transition-all bg-blurple rounded-full hover:bg-white group"
+                  className="mr-5 font-medium leading-6 text-white hover:text-blurple"
                 >
-                  <span className="absolute inset-0 border-0 group-hover:border-[25px] ease-linear duration-100 transition-all border-white rounded-full"></span>
-                  <span className="relative w-full text-left text-white transition-colors duration-200 ease-in-out group-hover:text-blue-600">
-                    Dashboard
-                  </span>
+                  Dashboard
                 </a>
-              </div>
+                <a
+                  href="#_"
+                  className="mr-5 font-medium leading-6 text-white hover:text-blurple"
+                >
+                  Blog
+                </a>
+              </nav>
+            </div>
+
+            <div className="inline-flex items-center ml-5 space-x-6 lg:justify-end">
+              <a
+                href="#"
+                className="text-base font-medium leading-6 text-blurple whitespace-no-wrap transition duration-150 ease-in-out hover:text-white"
+              >
+                Sign in
+              </a>
+              <a
+                href="#"
+                className="inline-flex items-center justify-center px-4 py-2 text-base font-medium leading-6 text-white whitespace-no-wrap bg-indigo-600 border border-transparent rounded-md shadow-sm hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600"
+              >
+                Sign up
+              </a>
             </div>
           </div>
-        </nav>
+        </section>
         <Component {...pageProps} />
         <br></br>
         <br></br>
