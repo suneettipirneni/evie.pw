@@ -20,6 +20,7 @@
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-embed-gist": "^1.0.12",
+    "react-konami-code": "^2.2.2",
     "react-player": "^2.9.0",
     "remark": "^14.0.1",
     "remark-html": "^15.0.0",

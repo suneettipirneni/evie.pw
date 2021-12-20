@@ -2,8 +2,30 @@ import type { NextPage } from "next";
 import Image from "next/image";
 import { usePlausible } from "next-plausible";
 import ReactPlayer from "react-player/lazy";
+import Konami, { useKonami } from "react-konami-code";
+import { useState } from "react";
+
 const Index: NextPage = () => {
+  const [botName, setBotName] = useState("Evie");
+  const [invite, setInvite] = useState(
+    "https://discord.com/oauth2/authorize?client_id=807543126424158238&permissions=518855707712&scope=bot%20applications.commands"
+  );
+  const easterEgg = () => {
+    if (botName === "Evie") {
+      setBotName("YourAverageBot");
+      setInvite(
+        "https://discord.com/oauth2/authorize?client_id=797268032539590687&permissions=518855707712&scope=bot%20applications.commands"
+      );
+    } else {
+      setBotName("Evie");
+      setInvite(
+        "https://discord.com/oauth2/authorize?client_id=807543126424158238&permissions=518855707712&scope=bot%20applications.commands"
+      );
+    }
+  };
+
   const plausible = usePlausible();
+  useKonami(easterEgg);
   return (
     <div>
       <div className=" grid justify-items-stretch ...">
@@ -18,14 +40,14 @@ const Index: NextPage = () => {
             height={640}
           />
           <h1 className="text-4xl sm:text-6xl lg:text-7xl leading-none font-extrabold tracking-tight  mt-10 mb-8 sm:mt-14 sm:mb-10 text-white text-center">
-            It&apos;s time to use Evie in your Discord server.
+            It&apos;s time to use {botName} in your Discord server.
           </h1>
           <br />
           <br />
           <div className="justify-self-center ...">
             <p className="text-white text-lg sm:text-2xl sm:leading-10 font-medium mb-10 sm:mb-11 text-center">
-              Evie is a feature-rich, easy to use Discord bot built to deliver
-              the best experience of a bot on Discord!
+              {botName} is a feature-rich, easy to use Discord bot built to
+              deliver the best experience of a bot on Discord!
             </p>
 
             <div className="grid justify-items-stretch ...">
@@ -43,7 +65,7 @@ const Index: NextPage = () => {
                   <div className="hover: transition duration-500 hover:scale-125">
                     <a
                       onClick={() => plausible("mainInvite")}
-                      href="https://discord.com/oauth2/authorize?client_id=807543126424158238&permissions=518855707712&scope=bot%20applications.commands"
+                      href={invite}
                       id="GFG"
                       className="box-border relative z-30 inline-flex items-center justify-center w-auto px-8 py-3 overflow-hidden font-bold text-white transition-all duration-300 bg-blurple rounded-md cursor-pointer group ring-offset-2 ring-1 ring-indigo-300 ring-offset-indigo-200 hover:ring-offset-indigo-500 ease focus:outline-none"
                     >
@@ -64,7 +86,7 @@ const Index: NextPage = () => {
                             d="M13 10V3L4 14h7v7l9-11h-7z"
                           />
                         </svg>
-                        Invite Evie
+                        Invite {botName}
                       </span>
                     </a>
                   </div>
@@ -116,7 +138,7 @@ const Index: NextPage = () => {
       <br />
       <br />
       <div className="text-5xl leading-none font-extrabold tracking-tight mb-4 text-white text-center">
-        What is Evie all about?
+        What is {botName} all about?
       </div>
       <section className="px-2 py-32  md:px-0">
         <div className="container items-center max-w-6xl px-8 mx-auto xl:px-5">
@@ -134,19 +156,19 @@ const Index: NextPage = () => {
                   server, delete known phishing links, and more on our online{" "}
                   <a
                     className="underline text-blurple"
-                    href="https://dash.eviebot.rocks/"
+                    href="https://dash.{botName}bot.rocks/"
                   >
                     dashboard
                   </a>
-                  , for Evie to yell at them for using a banned word in{" "}
+                  , for {botName} to yell at them for using a banned word in{" "}
                   <strong>your</strong> server.
                 </p>
                 <div className="relative flex flex-col sm:flex-row sm:space-x-4">
                   <a
-                    href="https://discord.com/oauth2/authorize?client_id=807543126424158238&permissions=518855707712&scope=bot%20applications.commands"
+                    href={invite}
                     className="flex items-center w-full px-6 py-3 mb-3 text-lg text-white bg-indigo-600 rounded-md sm:mb-0 hover:bg-indigo-700 sm:w-auto"
                   >
-                    Invite Evie
+                    Invite {botName}
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       className="w-5 h-5 ml-1"
@@ -162,7 +184,7 @@ const Index: NextPage = () => {
                     </svg>
                   </a>
                   <a
-                    href="https://dash.eviebot.rocks/"
+                    href="https://dash.{botName}bot.rocks/"
                     className="flex items-center px-6 py-3 text-gray-500 bg-gray-100 rounded-md hover:bg-gray-200 hover:text-gray-600"
                   >
                     Open Dashboard
@@ -189,7 +211,7 @@ const Index: NextPage = () => {
                   src="/feat/bannedwords.gif"
                   width={948.666666667}
                   height={625.333333333}
-                  alt="Animated image of a user setting banned words for their server and then testing if Evie deletes the message with the banned word."
+                  alt="Animated image of a user setting banned words for their server and then testing if {botName} deletes the message with the banned word."
                 />
               </div>
             </div>
@@ -225,10 +247,10 @@ const Index: NextPage = () => {
                 </p>
                 <div className="relative flex flex-col sm:flex-row sm:space-x-4">
                   <a
-                    href="https://discord.com/oauth2/authorize?client_id=807543126424158238&permissions=518855707712&scope=bot%20applications.commands"
+                    href={invite}
                     className="flex items-center w-full px-6 py-3 mb-3 text-lg text-white bg-indigo-600 rounded-md sm:mb-0 hover:bg-indigo-700 sm:w-auto"
                   >
-                    Invite Evie
+                    Invite {botName}
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       className="w-5 h-5 ml-1"
@@ -252,5 +274,4 @@ const Index: NextPage = () => {
     </div>
   );
 };
-
 export default Index;
