@@ -1,16 +1,24 @@
-/** @type {import('next').NextConfig} */
 module.exports = {
-  reactStrictMode: true,
-};
-module.exports = {
+  images: {
+    domains: ["cdn.discordapp.com", "dummyimage.com"]
+  },
   async redirects() {
     return [
       {
-        source: "/cache",
-        destination:
-          "https://gist.github.com/twisttaan/8a6bacde7b89c8dcc48fff0190ff9a56",
-        permanent: true,
+        source: "/imagine-griefing",
+        destination: "https://youtu.be/5R5LpLc315o",
+        permanent: true
       },
+      {
+        source: "/markets",
+        destination: "/market",
+        permanent: true
+      },
+      {
+        source: "/markets/login",
+        destination: "/market/login",
+        permanent: true
+      }
     ];
-  },
+  }
 };
