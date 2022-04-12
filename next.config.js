@@ -1,24 +1,13 @@
+/** @type {import('next').NextConfig} */
+const path = require("path");
+
 module.exports = {
   images: {
     domains: ["cdn.discordapp.com", "dummyimage.com"]
   },
-  async redirects() {
-    return [
-      {
-        source: "/imagine-griefing",
-        destination: "https://youtu.be/5R5LpLc315o",
-        permanent: true
-      },
-      {
-        source: "/markets",
-        destination: "/market",
-        permanent: true
-      },
-      {
-        source: "/markets/login",
-        destination: "/market/login",
-        permanent: true
-      }
-    ];
+  env: {
+    API_URL: process.env.API_URL,
+    CLIENT_ID: process.env.CLIENT_ID,
+    LIVE_URL: process.env.LIVE_URL
   }
 };
