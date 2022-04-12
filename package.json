@@ -48,5 +48,6 @@
     "tabWidth": 2,
     "trailingComma": "none",
     "semi": true
-  }
+  },
+  "packageManager": "yarn@3.2.0"
 }
