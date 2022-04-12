@@ -5,7 +5,9 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "make-djs-node-14-compatible": "node scripts/make-djs-node-14-compatible.mjs",
+    "vercel-build": "yarn make-djs-node-14-compatible && yarn build"
   },
   "dependencies": {
     "@emotion/react": "^11.7.1",
@@ -36,6 +38,7 @@
     "eslint": "7",
     "eslint-config-next": "12.0.2",
     "postcss": "^8.4.5",
+    "replace-in-file": "^6.3.2",
     "tailwindcss": "^3.0.8",
     "typescript": "4.4.4"
   },

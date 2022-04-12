@@ -6,7 +6,6 @@ import Header from "../components/Header";
 import { UserProvider } from "../context/UserProvider";
 import "../styles/main.css";
 function MyApp({ Component, pageProps }: AppProps) {
-  "test";
   return (
     <MantineProvider theme={{ colorScheme: "dark" }}>
       <UserProvider>

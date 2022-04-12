@@ -2,7 +2,6 @@ import type { NextPage } from "next";
 import { NextSeo } from "next-seo";
 import { useRouter } from "next/router";
 import { useCallback, useEffect, useState } from "react";
-import Header from "../../components/Header";
 import { useUser } from "../../context/UserProvider";
 import { APILogin } from "../../types";
 import { Nico } from "../../utils/nico";
@@ -22,13 +21,8 @@ const OauthCallback: NextPage = () => {
           clientId: process.env.CLIENT_ID,
           redirectUri: `${process.env.LIVE_URL}/oauth/callback`
         });
-
-        console.log(data);
-
         setUser(data);
-        setLoading(false);
-
-        // return push("/");
+        return push("/");
       } catch (error) {
         console.error(error);
         setLoading(false);
@@ -50,7 +44,6 @@ const OauthCallback: NextPage = () => {
   return (
     <>
       <NextSeo title="OAUTH Callback" nofollow noindex />
-      <Header />
     </>
   );
 };
