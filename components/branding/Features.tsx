@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 /* eslint-disable import/no-anonymous-default-export */
 import {
   DiscordCommand,
@@ -58,6 +59,7 @@ export default [
                   objectFit: "contain",
                   display: "inline-block"
                 }}
+                alt=""
                 src="https://cdn.discordapp.com/emojis/952340083418230874.gif?size=44&quality=lossless"
               />{" "}
               Banned <DiscordMention>tristan</DiscordMention>{" "}
@@ -121,6 +123,7 @@ export default [
           <DiscordEmbed slot="embeds" color="#00ff00">
             <DiscordEmbedDescription slot="description">
               <img
+                alt=""
                 style={{
                   width: "18px",
                   height: "18px",
@@ -154,16 +157,16 @@ export default [
               </DiscordEmbedField>
               <DiscordEmbedField fieldTitle="Server language">
                 This is an English server, please do not speak in any other
-                languages as this can make it hard for the staff to moderate &
+                languages as this can make it hard for the staff to moderate and
                 hard for other members to understand what you are trying to say.
               </DiscordEmbedField>
               <DiscordEmbedField fieldTitle="Discord ToS & Guidelines">
                 We strictly follow Discord Community Guidelines, any violation
-                against Discord's ToS & guidelines will result in a ban.
+                against Discord&apos;s ToS & guidelines will result in a ban.
               </DiscordEmbedField>
               <DiscordEmbedField fieldTitle="No spamming">
-                No spamming, advertising, or NSFW content. Don't be a jerk or
-                generally obnoxious, nobody likes a troller.
+                No spamming, advertising, or NSFW content. Don&apos;t be a jerk
+                or generally obnoxious, nobody likes a troller.
               </DiscordEmbedField>
               <DiscordEmbedField fieldTitle="Direct Messages">
                 If you are caught direct messaging someone from this server
