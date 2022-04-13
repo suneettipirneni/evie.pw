@@ -1,5 +1,5 @@
 {
-  "name": "eviebot-rocks",
+  "name": "evie-pw",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -24,10 +24,10 @@
     "@mui/material": "^5.2.6",
     "@skyra/discord-components-core": "^3.3.0",
     "@skyra/discord-components-react": "^3.3.0",
-    "next": "^12.1.5",
+    "next": "latest",
     "next-seo": "^5.4.0",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0"
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   },
   "devDependencies": {
     "@types/node": "16.11.6",
