@@ -2,7 +2,7 @@ import { NotificationsContextProps } from "@mantine/notifications/lib/types";
 import { APILogin } from "../types";
 
 export class Nico {
-  public static get<type>(route: string, options?: RequestInit): Promise<any> {
+  public static get<type>(route: string, options?: RequestInit): Promise<type> {
     return new Promise((resolve, reject) => {
       fetch(`${process.env.API_URL}${route}`, {
         ...options,
@@ -28,7 +28,7 @@ export class Nico {
       });
   }
 
-  public static post<type>(route: string, body?: Object): Promise<any> {
+  public static post<type>(route: string, body?: Object): Promise<type> {
     return new Promise((resolve, reject) => {
       fetch(`${process.env.API_URL}${route}`, {
         method: "POST",
