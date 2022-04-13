@@ -1,4 +1,5 @@
 import { LogoutIcon } from "@heroicons/react/outline";
+import { useNotifications } from "@mantine/notifications";
 import {
   ListItemIcon,
   ListItemText,
@@ -27,6 +28,7 @@ export default function UserIcon() {
   };
 
   const { user, setUser } = useUser();
+  const notifications = useNotifications();
 
   return (
     <>
@@ -71,9 +73,9 @@ export default function UserIcon() {
               onClick={
                 user?.user
                   ? () => {
-                      Nico.post("/oauth/logout").then(() => {
-                        setUser(null);
+                      Nico.logOut(setUser, notifications).then(() => {
                         handleClose();
+                        router.push("/");
                       });
                     }
                   : () => router.push(OAUTH_ENTRYPOINT)
