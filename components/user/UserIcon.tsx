@@ -11,6 +11,7 @@ import { useRouter } from "next/router";
 import { useState } from "react";
 import { useUser } from "../../context/UserProvider";
 import { OAUTH_ENTRYPOINT } from "../../utils/constants";
+import { Nico } from "../../utils/nico";
 import { profilePic } from "../../utils/parsers";
 
 export default function UserIcon() {
@@ -70,7 +71,9 @@ export default function UserIcon() {
               onClick={
                 user
                   ? () => {
-                      setUser(null);
+                      Nico.post("/oauth/logout").then(() => {
+                        setUser(null);
+                      });
                     }
                   : () => router.push(OAUTH_ENTRYPOINT)
               }
