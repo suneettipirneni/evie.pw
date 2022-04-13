@@ -37,9 +37,9 @@ export default function UserIcon() {
         aria-controls={open ? "basic-menu" : undefined}
         aria-haspopup="true"
         aria-expanded={open ? "true" : undefined}
-        onClick={user ? handleClick : () => router.push(OAUTH_ENTRYPOINT)}
+        onClick={user?.user ? handleClick : () => router.push(OAUTH_ENTRYPOINT)}
       >
-        {user ? (
+        {user?.user ? (
           <Image
             src={profilePic(user.user)}
             width={40}
@@ -69,7 +69,7 @@ export default function UserIcon() {
             </ListItemIcon>
             <ListItemText
               onClick={
-                user
+                user?.user
                   ? () => {
                       Nico.post("/oauth/logout").then(() => {
                         setUser(null);
@@ -78,7 +78,7 @@ export default function UserIcon() {
                   : () => router.push(OAUTH_ENTRYPOINT)
               }
             >
-              {user ? "Logout" : "Login"}
+              {user?.user ? "Logout" : "Login"}
             </ListItemText>
           </MenuItem>
         </MenuList>
