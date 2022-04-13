@@ -114,3 +114,11 @@ export interface User {
   mfa_enabled: boolean;
   premium_type: number;
 }
+
+export interface Stats {
+  users: number;
+  guilds: number;
+  cpuUsage: number;
+  wsPing: number;
+  unavailableGuilds: number;
+}

@@ -1,4 +1,4 @@
-import { Card, Text, Title } from "@mantine/core";
+import { Paper, Text, Title } from "@mantine/core";
 import Features from "./Features";
 const Feature = ({
   name,
@@ -6,7 +6,7 @@ const Feature = ({
   preview
 }: typeof Features extends Array<infer U> ? U : never) => {
   return (
-    <Card shadow="sm" style={{ minWidth: 240 }}>
+    <Paper shadow="md" radius="md" p="xs" withBorder>
       {preview}
 
       <div
@@ -23,7 +23,7 @@ const Feature = ({
       <Text size="sm" style={{ minHeight: 140 }}>
         {description}
       </Text>
-    </Card>
+    </Paper>
   );
 };
 

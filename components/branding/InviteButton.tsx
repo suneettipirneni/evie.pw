@@ -1,8 +1,14 @@
 import { Button } from "@mantine/core";
+import router from "next/router";
 
 export default function InviteButton() {
   return (
-    <Button variant="light" color="grape" radius="md" size="xl">
+    <Button
+      onClick={() => {
+        router.push("/invite");
+      }}
+      color="grape"
+    >
       Invite Evie
     </Button>
   );
