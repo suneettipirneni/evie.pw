@@ -1,4 +1,4 @@
-import { BanIcon } from "@heroicons/react/outline";
+import { LogoutIcon } from "@heroicons/react/outline";
 import {
   ListItemIcon,
   ListItemText,
@@ -62,7 +62,7 @@ export default function UserIcon() {
         <MenuList>
           <MenuItem>
             <ListItemIcon>
-              <BanIcon
+              <LogoutIcon
                 className="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400"
                 aria-hidden="true"
               />
@@ -73,6 +73,7 @@ export default function UserIcon() {
                   ? () => {
                       Nico.post("/oauth/logout").then(() => {
                         setUser(null);
+                        handleClose();
                       });
                     }
                   : () => router.push(OAUTH_ENTRYPOINT)
