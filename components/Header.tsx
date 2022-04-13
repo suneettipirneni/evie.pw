@@ -1,4 +1,5 @@
 import Link from "next/link";
+import router from "next/router";
 import UserIcon from "./user/UserIcon";
 
 export default function Header() {
@@ -17,6 +18,14 @@ export default function Header() {
               </Link>
             </div>
             <div className="inline-flex items-center ml-5 space-x-6 lg:justify-end">
+              <button
+                onClick={() => {
+                  router.push("/stats");
+                }}
+                className="text-base font-medium leading-6 text-gray-600 whitespace-no-wrap transition duration-150 ease-in-out hover:text-gray-900 dark:text-white dark:hover:text-gray-400"
+              >
+                Stats
+              </button>
               <UserIcon />
             </div>
           </div>
