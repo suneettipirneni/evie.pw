@@ -1,3 +1,4 @@
+import { useNotifications } from "@mantine/notifications";
 import type { NextPage } from "next";
 import { NextSeo } from "next-seo";
 import { useRouter } from "next/router";
@@ -11,10 +12,20 @@ const OauthCallback: NextPage = () => {
   const [loading, setLoading] = useState(false);
   const { user, setUser } = useUser();
   const { push, query, asPath } = useRouter();
+  const notifications = useNotifications();
 
   const finalizeAuthFlow = useCallback(
     async (code: string | null) => {
       setLoading(true);
+      notifications.showNotification({
+        id: "oauth-callback",
+        color: "grape",
+        title: "Logging in...",
+        message: "Please wait while we log you in...",
+        loading: true,
+        autoClose: false,
+        disallowClose: true
+      });
 
       try {
         const data: APILogin = await Nico.post(`/oauth/callback`, {
@@ -23,9 +34,21 @@ const OauthCallback: NextPage = () => {
           redirectUri: `${process.env.LIVE_URL}/oauth/callback`
         });
         setUser(data);
+
+        notifications.updateNotification("oauth-callback", {
+          title: "Successfully logged in!",
+          message: `Welcome back ${data.user.username}!`,
+          autoClose: 2000
+        });
+
         return push("/");
       } catch (error) {
         console.error(error);
+        notifications.updateNotification("oauth-callback", {
+          title: "Error logging in!",
+          message: `Something went wrong while logging in. Please try again.`,
+          color: "red"
+        });
         setLoading(false);
       }
     },
