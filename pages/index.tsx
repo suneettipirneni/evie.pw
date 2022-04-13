@@ -1,9 +1,8 @@
-import { Center, Container, SimpleGrid } from "@mantine/core";
+import { Center, Container, SimpleGrid, Space } from "@mantine/core";
 import type { NextPage } from "next";
 import Feature from "../components/branding/Feature";
 import Features from "../components/branding/Features";
 import HeroDesc from "../components/branding/HeroDesc";
-import InviteButton from "../components/branding/InviteButton";
 import OpenGraph from "../components/branding/util/OpenGraph";
 
 const Home: NextPage = () => {
@@ -19,8 +18,8 @@ const Home: NextPage = () => {
         <Center>
           <SimpleGrid cols={1} spacing="sm">
             <HeroDesc />
-            <InviteButton />
           </SimpleGrid>
+          <Space h="md" />
         </Center>
         <SimpleGrid cols={2} spacing="sm">
           {Features.map(({ name, description, preview }) => (

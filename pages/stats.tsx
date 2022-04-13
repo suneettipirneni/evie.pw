@@ -1,8 +1,7 @@
-import { Center, Container, SimpleGrid } from "@mantine/core";
+import { Center, Container, SimpleGrid, Space } from "@mantine/core";
 import type { NextPage } from "next";
 import { useEffect, useState } from "react";
 import HeroDesc from "../components/branding/HeroDesc";
-import InviteButton from "../components/branding/InviteButton";
 import OpenGraph from "../components/branding/util/OpenGraph";
 import { SpinnyThing } from "../components/stats/SpinnyThing";
 import { StatBlock } from "../components/stats/StatBlock";
@@ -34,8 +33,8 @@ const Home: NextPage = () => {
         <Center>
           <SimpleGrid cols={1} spacing="sm">
             <HeroDesc />
-            <InviteButton />
           </SimpleGrid>
+          <Space h="md" />
         </Center>
         <SimpleGrid cols={2} spacing="sm">
           <SpinnyThing
