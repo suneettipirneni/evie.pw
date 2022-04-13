@@ -1,0 +1,42 @@
+[
+  {
+    "source": "/discord",
+    "destination": "https://discord.gg/VKaNS86wEN",
+    "permanent": true
+  },
+  {
+    "source": "/invite",
+    "destination": "https://discord.com/api/oauth2/authorize?client_id=807543126424158238&permissions=1461257808918&scope=bot%20applications.commands",
+    "permanent": true
+  },
+  {
+    "source": "/bot",
+    "destination": "https://eviebot.rocks",
+    "permanent": false
+  },
+  {
+    "source": "/botgh",
+    "destination": "https://github.com/twisttaan/Evie",
+    "permanent": false
+  },
+  {
+    "source": "/jwrld",
+    "destination": "https://discord.com/api/oauth2/authorize?client_id=961142622636871781&permissions=3146752&scope=bot%20applications.commands",
+    "permanent": false
+  },
+  {
+    "source": "/jwrld-privacy",
+    "destination": "https://gist.github.com/twisttaan/5299919a4f760b71df87ec15c3beb85b",
+    "permanent": false
+  },
+  {
+    "source": "/tristan",
+    "destination": "https://github.com/twisttaan",
+    "permanent": false
+  },
+  {
+    "source": "/tsmp",
+    "destination": "https://tristansmp.com",
+    "permanent": true
+  }
+]
