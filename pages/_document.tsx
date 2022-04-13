@@ -4,19 +4,6 @@ export default function Document() {
   return (
     <Html>
       <Head>
-        <meta property="og:title" content="Evie" />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://eviebot.rocks/" />
-        <meta
-          property="og:image"
-          content="https://eviebot.rocks/assets/Banner.png"
-        />
-        <meta
-          property="og:description"
-          content="It's time to use Evie in your Discord server! Evie is a feature-rich, easy to use Discord bot built to deliver the best experience of a bot on Discord!"
-        />
-        <meta name="theme-color" content="#7289DA" />
-
         <link
           rel="apple-touch-icon"
           sizes="180x180"
