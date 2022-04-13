@@ -4,14 +4,12 @@ import Feature from "../components/branding/Feature";
 import Features from "../components/branding/Features";
 import HeroDesc from "../components/branding/HeroDesc";
 import InviteButton from "../components/branding/InviteButton";
-import UserCard from "../components/branding/UserCard";
 
 const Home: NextPage = () => {
   return (
     <Container>
       <Center>
         <SimpleGrid cols={1} spacing="sm">
-          <UserCard />
           <HeroDesc />
           <InviteButton />
         </SimpleGrid>
