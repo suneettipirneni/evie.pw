@@ -9,11 +9,15 @@ import {
 } from "@mui/material";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useUser } from "../../context/UserProvider";
 import { OAUTH_ENTRYPOINT } from "../../utils/constants";
 import { Nico } from "../../utils/nico";
 import { profilePic } from "../../utils/parsers";
+
+interface UserOrError {
+  error?: string;
+}
 
 export default function UserIcon() {
   const router = useRouter();
@@ -29,6 +33,19 @@ export default function UserIcon() {
 
   const { user, setUser } = useUser();
   const notifications = useNotifications();
+
+  useEffect(() => {
+    Nico.get<UserOrError>("/users/@me")
+      .catch((err) => {
+        setUser(null);
+      })
+      .then((res) => {
+        if (!res) return;
+        if (res.error) {
+          setUser(null);
+        }
+      });
+  }, []);
 
   return (
     <>
